@@ -11,8 +11,8 @@ body {
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  background: #0f172a;
-  color: #f8fafc;
+  background: linear-gradient(180deg, #87ceeb 0%, #c0e8ff 100%);
+  color: #0f172a;
 }
 
 img {
@@ -24,6 +24,12 @@ img {
   max-width: 1300px;
   margin: 0 auto;
   padding: 24px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
 }
 
 .dashboard-header {

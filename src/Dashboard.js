@@ -44,16 +44,19 @@ function Dashboard() {
 
   return (
     <main className="dashboard-shell">
+      <div className="topbar">
+        <button className="connect-button">Connexion</button>
+      </div>
       <header className="dashboard-header">
         <div>
           <p className="badge">VoteLedger</p>
-          <h1>Statut des votes</h1>
+          <h1>Vote en temps réel des candidats</h1>
           <p className="subtitle">
-            Recapitulatif des votes par candidat et par jour pour les 5 derniers jours
+            Recapitulatif des votes par candidat et par jour pour les 5 derniers
+            jours
           </p>
         </div>
         <div className="header-meta">
-          <button className="connect-button">Connexion</button>
           <div className="meta-stats">
             <span>Total candidats</span>
             <strong>{candidates.length}</strong>
