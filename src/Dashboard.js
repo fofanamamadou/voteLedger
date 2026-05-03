@@ -1,35 +1,26 @@
-import abdoulayePhoto from "./assets/abdoulaye.jpg";
-import amadouPhoto from "./assets/amadou.png";
-import assimiPhoto from "./assets/assimi.jpg";
-import choguelPhoto from "./assets/choguel.png";
-
 const candidates = [
   {
     id: 1,
     firstName: "Abdoulaye",
     lastName: "Maiga",
-    photo: abdoulayePhoto,
     dailyVotes: [48, 61, 74, 80, 72],
   },
   {
     id: 2,
     firstName: "Amadou Sy",
     lastName: "Savané",
-    photo: amadouPhoto,
     dailyVotes: [55, 69, 62, 76, 90],
   },
   {
     id: 3,
     firstName: "Assimi",
     lastName: "Goïta",
-    photo: assimiPhoto,
     dailyVotes: [38, 54, 67, 75, 81],
   },
   {
     id: 4,
     firstName: "Choguel Koukala",
     lastName: "Maïga",
-    photo: choguelPhoto,
     dailyVotes: [43, 50, 68, 66, 59],
   },
 ];
@@ -55,29 +46,25 @@ function Dashboard() {
     <main className="dashboard-shell">
       <header className="dashboard-header">
         <div>
-          <p className="badge">Élections Mali</p>
-          <h1>Tableau de bord des procès-verbaux</h1>
+          <p className="badge">VoteLedger</p>
+          <h1>Statut des votes</h1>
           <p className="subtitle">
-            Visualisation responsive des votes journaliers et du suivi des
-            candidats.
+            Recapitulatif des votes par candidat et par jour pour les 5 derniers jours
           </p>
         </div>
         <div className="header-meta">
-          <span>Total candidats</span>
-          <strong>{candidates.length}</strong>
+          <button className="connect-button">Connexion</button>
+          <div className="meta-stats">
+            <span>Total candidats</span>
+            <strong>{candidates.length}</strong>
+          </div>
         </div>
       </header>
 
       <section className="overview-grid">
         {totalsByCandidate.map((candidate) => (
           <article key={candidate.id} className="candidate-card">
-            <div className="candidate-photo">
-              <img
-                src={candidate.photo}
-                alt={`${candidate.firstName} ${candidate.lastName}`}
-              />
-            </div>
-            <div className="candidate-info">
+            <div className="candidate-info full-width">
               <h2>
                 {candidate.firstName} {candidate.lastName}
               </h2>
